@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+    - npm install --silent --no-progress -g npm
+    - npm install --silent --no-progress -g serverless
+  pre_build:
+    commands:
+    - npm install --silent --no-progress
+  build:
+    commands:
+      - echo "deploy node api"
+      - sls deploy -v -s production
+
+cache:
+  paths:
+    - 'node_modules/**/*'
