@@ -7,7 +7,7 @@ phases:
     - npm install --silent --no-progress -g serverless
   pre_build:
     commands:
-    - npm install --silent --no-progress
+    - npm install
   build:
     commands:
       - echo "deploy node api"
